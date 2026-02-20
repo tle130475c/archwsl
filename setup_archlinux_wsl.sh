@@ -24,7 +24,7 @@ echo LANG=en_US.UTF-8 > /etc/locale.conf
 echo -e "${rootpass}\n${rootpass}" | passwd
 
 # add new user
-useradd -G wheel,audio,lp,optical,storage,disk,video,power -s /bin/bash -m $username -d /home/$username -c "$realname"
+useradd -G wheel,audio,lp,optical,storage,disk,video,power,render -s /bin/bash -m $username -d /home/$username -c "$realname"
 echo -e "${userpass}\n${userpass}" | passwd $username
 
 # allow user in wheel group execute any command
