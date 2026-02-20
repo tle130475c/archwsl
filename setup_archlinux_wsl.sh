@@ -45,3 +45,9 @@ pacman -Syu --needed --noconfirm eslint prettier nvm
 
 # python
 pacman -Syu --needed --noconfirm uv
+
+# docker
+pacman -Syu --needed --noconfirm docker docker-compose docker-buildx minikube kubectl helm
+systemctl disable --now systemd-networkd-wait-online.service
+systemctl enable docker.service
+usermod -aG docker $username
